@@ -17,7 +17,7 @@ fun main(
     fun exit(
         reason : String
     ) {
-        println("$reason\nUsage: directory_to_images_need_to_be_packed output_image\nIf you need more help, create issue on https://github.com/TheKisDevs/Texture-Packer")
+        println("$reason\nUsage: \"directory of images to be packed\" \"output image\"\nIf you need more help, create issue on https://github.com/TheKisDevs/Texture-Packer")
         exitProcess(0)
     }
 
