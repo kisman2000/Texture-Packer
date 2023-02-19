@@ -24,6 +24,14 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-application {
-    mainClass.set("the.kis.devs.texturepacker.MainKt")
+tasks.jar {
+    manifest.attributes(
+        "Main-Class" to "the.kis.devs.texturepacker.MainKt"
+    )
+
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
 }
