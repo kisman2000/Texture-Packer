@@ -64,7 +64,7 @@ fun main(
     }
 
     if(widths.size > 1 || heights.size > 1) {
-        exit("Input files dont have semi size!")
+        exit("Input files dont have same size!")
     }
 
     val width = widths.first()
